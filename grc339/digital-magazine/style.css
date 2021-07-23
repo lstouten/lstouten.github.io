@@ -112,6 +112,18 @@ h4 {
     margin: 0;
 }
 
+section.timing label {
+    font-family: agenda, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: rgb(230,230,230);
+    line-height: 1.1em;
+    font-size: 1.1em;
+    
+}
+
 @media screen and (max-width:40em) {
     
     h1 {
@@ -265,6 +277,15 @@ h4 {
     section.interests ul li {
         margin-right: 1em;
         flex: 1 0 15em;
+    }
+    
+    section.timing ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    section.timing ul li {
+        flex: 1 0 4em;
     }
     
     footer {
