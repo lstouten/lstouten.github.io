@@ -9,7 +9,7 @@ body {
 }
 
 div.container {
-    max-width: 80em;
+    max-width: 75em;
     margin: auto;
     padding: 2em;
 }
@@ -68,6 +68,9 @@ nav ul li a {
 
 section.main-story {
     background-color: rgba(81,123,123,0.75);
+}
+section.main-story p {
+    max-width: 87%;
 }
 
 section.interests p {
@@ -136,7 +139,7 @@ section.timing label {
     div.container {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        grid-gap: 0 1em;
+        grid-gap: 1em;
     }
     
     h1 {
@@ -157,8 +160,42 @@ section.timing label {
     section.main-story {
         max-width: 100%;
         grid-column: 1/2;
-        margin-bottom: 1.5em;
         grid-row: 2/3;
+        margin-bottom: 0;
+    }
+    
+    section.main-story a {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    section.main-story h3 {
+        flex: 1 0 auto;
+        margin-top: 1em;
+    }
+    
+    section.main-story p {
+        flex: 2 0 auto;
+    }
+    
+    section.main-story figure {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    section.main-story figure div {
+        flex: 1 0 15em;
+        background-image: url(annushka-9.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    section.main-story figure div img {
+        height: 100%;
+        opacity: 0;
     }
     
     aside.main-story {
@@ -201,8 +238,19 @@ section.timing label {
     }
     
     aside.home {
-        display: grid;
-        
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        grid-gap: 1em;
+    }
+    
+    aside.home section {
+        flex: 1 0 4em;
+        margin-bottom: 0;
+    }
+    
+    aside.home h2, h3 {
+        max-width: 84%;
     }
     
     aside {
@@ -217,7 +265,7 @@ section.timing label {
     }
     
     section.tertiary {
-        padding: 1.5em 4em 2em 1.5em;
+        padding: 1.5em 3.5em 2em 1.5em;
     }
     
     section.tertiary h3 {
@@ -234,6 +282,10 @@ section.timing label {
         display: grid;
         grid-template-columns: repeat(5,1fr);
         grid-gap: 0 1em;
+    }
+    
+    div.photo-articles section {
+        margin-bottom: 0;
     }
     
     div.form {
@@ -344,7 +396,7 @@ div.photo-gallery {
 main.photo-gallery {
     position: relative;
     overflow: hidden;
-    padding-bottom: calc(56% + 3em);
+    padding-bottom: calc(66% + 3em);
     width: 100%;
     margin: auto;
 }
@@ -365,8 +417,8 @@ main.photo-gallery img {
 nav.photo-gallery {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-gap: .2em;
-    margin: 0;
+    grid-gap: .3em;
+    margin: .6em 0 0;
 }
 
 label {
@@ -375,6 +427,17 @@ label {
 
 div.photo-gallery input {
     display: none;
+}
+
+div.photo-gallery figcaption {
+    font-family: agenda, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: rgba(81,123,123,0.85);
+    line-height: 1em;
+    font-size: 1em;
 }
 
 button {
